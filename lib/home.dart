@@ -59,9 +59,10 @@ class _HomeState extends State<Home> {
             ),
             SizedBox(height: 40),
             Divider(
+              thickness: 0.5,
               indent: 250,
               endIndent: 250,
-              color: Color(0xFFA7ADBA),
+              color: Color(0xFF6B737D),
             ),
             SizedBox(height: 30),
             Text(
