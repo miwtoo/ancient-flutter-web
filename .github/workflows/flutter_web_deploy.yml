@@ -12,6 +12,13 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false  # Disable default token persist
+
+      - name: Set up Git for Actions Bot
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
